@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaa App - By Santama</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="title">
+            <h1>Yaa App<br> <span>By Santama</span></h1>
+        </div>
+        <form id="form">
+            <h2>H a l o o . . .</h2>
+            <label for="nama">Nama</label>
+            <input type="text" name="nama" id="nama" placeholder="Contoh : Bobi" required>
+            <label for="jenisKelamin">Jenis Kelamin</label>
+            <select name="jenisKelamin" id="jenisKelamin" required>
+                <option value="" disabled selected>- Pilih -</option>
+                <option value="lakiLaki">Laki-laki</option>
+                <option value="perempuan">Perempuan</option>
+            </select>
+            <button type="submit" id="submitBtn">Kirim</button>
+        </form>
+
+        <div class="popup">
+            <div class="blocker" onclick="remove()"></div>
+            <div class="contents">
+                <div class="tutupan"></div>
+                <iframe id="img" src=""></iframe>
+                <h3 id="h3"></h3>
+                <p id="p-1"></p>
+                <p id="p-2"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

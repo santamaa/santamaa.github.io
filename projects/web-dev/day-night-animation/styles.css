@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background: #D5EAF6;
+    padding: 75px 0;
+    animation: bg 20s linear infinite;
+}
+
+h2 {
+    margin: 0 12px;
+    position: absolute;
+    top: 40px;
+    z-index: 3;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+    animation: h2 4s ease alternate-reverse infinite;
+}
+
+h2 span {
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.wrapper {
+    width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.mount {
+    width: 75%;
+    aspect-ratio: 1;
+    position: absolute;
+}
+
+.mount-one {
+    background: #3FA5D0;
+    z-index: 3;
+    transform: translateY(68%) rotate(45deg);
+    border-top-left-radius: 60px;
+    animation: mount-one 20s linear infinite;
+}
+.mount-two {
+    background: #57B5E7;
+    z-index: 2;
+    transform: translate(52%, 80%) rotate(45deg);
+    border-top-left-radius: 20px;
+    animation: mount-two 20s linear infinite;
+}
+.mount-three {
+    background: #91D9FA;
+    z-index: 1;
+    transform: translate(-48%, 84%) rotate(45deg);
+    border-top-left-radius: 40px;
+    animation: mount-three 20s linear infinite;
+}
+
+.sun {
+    width: 16%;
+    max-width: 120px;
+    aspect-ratio: 1;
+    background: #FFDE19;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    filter: blur(8px);
+    border-radius: 50%;
+    animation: sun 20s ease-out infinite;
+}
+
+.moon {
+    width: 8%;
+    max-width: 60px;
+    aspect-ratio: 1;
+    background: #FEFDF9;
+    position: absolute;
+    bottom: 60%;
+    right: 16%;
+    filter: blur(1px);
+    border-radius: 50%;
+    animation: moon 20s ease-out infinite;
+}
+
+
+@keyframes h2 {
+    from {
+        color: #000000;
+    }
+    to {
+        color: #FFFFFF;
+    }
+}
+
+@keyframes bg {
+    10% {
+        background: #D5EAF6;
+    }
+    40% {
+        background: #D5EAF6;
+    }
+    40% {
+        background: #F5CEBF;
+    }
+    70% {
+        background: #F5CEBF;
+    }
+    70% {
+        background: #185BEE;
+    }
+    100% {
+        background: #185BEE;
+    }
+}
+
+@keyframes mount-one {
+    10% {
+        background: #3FA5D0;
+    }
+    40% {
+        background: #3FA5D0;
+    }
+    40% {
+        background: #F44540;
+    }
+    70% {
+        background: #F44540;
+    }
+    70% {
+        background: #020B48;
+    }
+    100% {
+        background: #020B48;
+    }
+}
+
+@keyframes mount-two {
+    10% {
+        background: #57B5E7;
+    }
+    40% {
+        background: #57B5E7;
+    }
+    40% {
+        background: #F55E43;
+    }
+    70% {
+        background: #F55E43;
+    }
+    70% {
+        background: #0C2678;
+    }
+    100% {
+        background: #0C2678;
+    }
+}
+
+@keyframes mount-three {
+    10% {
+        background: #91D9FA;
+    }
+    40% {
+        background: #91D9FA;
+    }
+    40% {
+        background: #FC8D72;
+    }
+    70% {
+        background: #FC8D72;
+    }
+    70% {
+        background: #193EB8;
+    }
+    100% {
+        background: #193EB8;
+    }
+}
+
+@keyframes sun {
+    from {
+        top: 0%;
+    }
+    to {
+        top: 100%;
+    }
+}
+
+@keyframes moon {
+    0% {
+        visibility: hidden;
+    }
+    60% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}

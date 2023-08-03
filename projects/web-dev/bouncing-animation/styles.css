@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background: #E8F6EF;
+    padding: 75px 0;
+}
+
+h2 {
+    margin: 0 12px;
+    position: absolute;
+    top: 40px;
+    z-index: 3;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+}
+
+h2 span {
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.body {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 4px;
+    z-index: 1;
+    background: #FFE194;
+    border: 3px solid #4C4C6D;
+    border-radius: 50%;
+    animation: jump 1s ease-out alternate-reverse infinite;
+}
+
+.eyes {
+    width: 64%;
+    height: 28%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left-eye,
+.right-eye {
+    height: 100%;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    background: #E8F6EF;
+    border: 3px solid #4C4C6D;
+    border-radius: 50%;
+}
+
+.pupil {
+    width: 45%;
+    height: 45%;
+    background: #4C4C6D;
+    border-radius: 50%;
+}
+
+.mouth {
+    width: 40%;
+    height: 20%;
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    background: #E8F6EF;
+    border: 3px solid #4C4C6D;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    animation: mouth 1s ease-in-out alternate-reverse infinite;
+}
+
+.shadow {
+    width: 100px;
+    height: 10px;
+    position: absolute;
+    z-index: 0;
+    background: #4C4C6D;
+    opacity: 40%;
+    border: 2px solid #4C4C6D;
+    border-radius: 50%;
+    animation: shadow 1s ease-out alternate-reverse infinite;
+}
+
+
+@keyframes jump {
+    from {
+        bottom: 4px;
+    }
+    to {
+        bottom: 204px;
+    }
+}
+
+@keyframes mouth {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 0.6 1.5;
+        left: 42%;
+        bottom: 16%;
+        background: #4C4C6D;
+        border-radius: 50%;
+    }
+}
+
+@keyframes shadow {
+    from {
+        transform: scaleX(0.8);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .body {
+        width: 200px;
+        height: 200px;
+        bottom: 8px;
+        border: 4px solid #4C4C6D;
+    }
+    .left-eye,
+    .right-eye {
+        border-width: 4px;
+    }
+    .mouth {
+        border-width: 4px;
+    }
+    .shadow {
+        width: 200px;
+        height: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .body {
+        width: 300px;
+        height: 300px;
+        bottom: 8px;
+        border: 5px solid #4C4C6D;
+    }
+    .left-eye,
+    .right-eye {
+        border-width: 5px;
+    }
+    .mouth {
+        border-width: 5px;
+    }
+    .shadow {
+        width: 300px;
+        height: 30px;
+    }
+}

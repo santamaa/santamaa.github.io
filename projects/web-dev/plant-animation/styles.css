@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background: #FFE7A0;
+    padding: 75px 0;
+}
+
+h2 {
+    margin: 0 12px;
+    position: absolute;
+    top: 40px;
+    z-index: 3;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+}
+
+h2 span {
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.ground {
+    width: 240px;
+    height: 80px;
+    z-index: 2;
+    background: #7E370C;
+    border-radius: 125px 125px 0 0;
+}
+
+.cover {
+    width: 250px;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    border-radius: 150px 150px 0 0;
+    background: #FFE7A0;
+}
+
+.plant {
+    width: 190px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: absolute;
+    z-index: 0;
+    bottom: 125px;
+}
+
+.trunk {
+    width: 20px;
+    height: 300px;
+    position: absolute;
+    background: #54B435;
+    border-radius: 20px;
+    animation: trunk-animation 8s ease-in;
+}
+
+.leaf {
+    position: absolute;
+    background: #82CD47;
+}
+
+.leaf-one {
+    width: 37.5px;
+    height: 75px;
+    top: 110px;
+    left: 35px;
+    border-radius: 50% ;
+    transform: rotate(-45deg);
+    animation: leaf-animation 13s linear;
+}
+
+.leaf-two {
+    width: 37.5px;
+    height: 75px;
+    top: 140px;
+    right: 35px;
+    border-radius: 50%  ;
+    transform: rotate(45deg);
+    animation: leaf-animation 11s linear;
+}
+
+.leaf-three {
+    width: 50px;
+    height: 100px;
+    top: 180px;
+    left: 14px;
+    border-radius: 50%  ;
+    transform: rotate(-60deg);
+    animation: leaf-animation 10s linear;
+}
+
+.leaf-four {
+    width: 50px;
+    height: 100px;
+    top: 210px;
+    right: 14px;
+    border-radius: 50%  ;
+    transform: rotate(60deg);
+    animation: leaf-animation 8s ease-in-out;
+}
+
+.flower {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.flower-center {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #F0FF42;
+    animation: flower-animation 18s ease-in-out;
+}
+
+.flower-edge {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    background: #FF0F42;
+    animation: edge-animation 22s ease-in-out;
+}
+
+.edge-one {
+    top: 0;
+}
+
+.edge-two {
+    top: 12px;
+    right: 12px;
+}
+
+.edge-three {
+    right: 0;
+}
+
+.edge-four {
+    bottom: 12px;
+    right: 12px;
+}
+
+.edge-five {
+    bottom: 0;
+}
+
+.edge-six {
+    left: 12px;
+    bottom: 12px;
+}
+
+.edge-seven {
+    left: 0;
+}
+
+.edge-eight {
+    top: 12px;
+    left: 12px;
+}
+
+
+@keyframes trunk-animation  {
+    0% {
+        bottom: -80%;
+        transform: scaleX(0.1);
+    }
+    100% {
+        bottom: 0%;
+    }
+}
+
+@keyframes leaf-animation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flower-animation {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes edge-animation {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-height: 560px) {
+    .container {
+        padding: 25px;
+    }
+    .cover {
+        height: 50px;
+    }
+    .plant {
+        bottom: 50px;
+    }
+}

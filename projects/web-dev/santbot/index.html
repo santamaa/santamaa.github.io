@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santbot - By Santama</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="text">
+                <h1>Santbot</h1>
+                <p>Chatbot using ChatGPT API by Santama</p>
+            </div>
+            <input type="checkbox" id="dark-toggle-btn">
+            <label for="dark-toggle-btn" class="menu-btn" >
+                <i id="dark-toggle-btn-icon" class="fa-solid fa-moon"></i>
+            </label>
+        </header>
+        
+        <section class="chat-box" id="section-chat-box">
+            <ul id="chat-box">
+                <li class="chat reply-chat">
+                    <p>Hi 👋<br>How can I help you today?</p>
+                </li>
+            </ul>
+        </section>
+    
+        <section class="chat-input" id="section-chat-input">
+            <textarea id="input-chat" placeholder="Enter anything . . ."></textarea>
+            <span id="send-btn">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+            </span>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/secure.js"></script>
+    
+</body>
+</html>

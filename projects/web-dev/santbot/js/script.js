@@ -25,7 +25,7 @@ const createChat = function(message, className) {
 
 const getResponse = function(chatElement) {
     const API_URL = "https://api.openai.com/v1/chat/completions";
-    const API_KEY = API_KEY_TOKEN;
+    const API_KEY = `${SANTBOT_API_KEY}`;
     const messageElement = chatElement.querySelector("p");
 
     const requestOptions = {
